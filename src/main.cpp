@@ -1,15 +1,19 @@
 #include <graphics/Window.hpp>
+#include <utils/Input.hpp>
 #include "Game.hpp"
 
 int main()
 {
     Window *window = new Window(1280, 720, "Hello!");
 
+    Input input(window);
+
     Game game;
 
     while (!window->closeRequested())
     {
-        game.update();
+        input.update();
+        game.update(input);
 
         window->clear();
 

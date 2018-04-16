@@ -19,13 +19,13 @@ Game::Game()
     GLfloat colors[] = {
             1.0f, 0.0f, 0.0f, 1.0f,
             1.0f, 1.0f, 0.0f, 1.0f,
+            0.0f, 1.0f, 0.0f, 1.0f,
             0.0f, 1.0f, 1.0f, 1.0f,
-            0.0f, 0.0f, 1.0f, 1.0f,
 
-            1.0f, 0.0f, 0.0f, 1.0f,
             1.0f, 1.0f, 0.0f, 1.0f,
-            0.0f, 1.0f, 1.0f, 1.0f,
-            0.0f, 0.0f, 1.0f, 1.0f
+            0.0f, 0.0f, 1.0f, 1.0f,
+            1.0f, 0.0f, 1.0f, 1.0f,
+            0.0f, 1.0f, 1.0f, 1.0f
     };
 
     GLuint indices[] = {
@@ -34,6 +34,9 @@ Game::Game()
 
             0, 3, 4, 3, 7, 4,
             1, 5, 2, 2, 5, 6,
+
+            0, 4, 1, 1, 4, 5,
+            2, 6, 3, 3, 6, 7
     };
 
     Buffer<GLfloat> pBuffer(positions, sizeof(positions));
@@ -47,15 +50,48 @@ Game::Game()
     projectionMatrix = glm::perspective(glm::radians(45.0f), 1280.0f / 720.0f, 0.1f, 100.0f);
 
     transformationMatrix = glm::mat4(1.0f);
-    transformationMatrix = glm::translate(transformationMatrix, glm::vec3(-1, 0, -5));
-    transformationMatrix = glm::rotate(transformationMatrix, (glm::lowp_float)glm::radians(45.0), glm::vec3(0, 1, 0));
+    transformationMatrix = glm::translate(transformationMatrix, glm::vec3(0, 0, -5));
+    //transformationMatrix = glm::rotate(transformationMatrix, (glm::lowp_float)glm::radians(45.0), glm::vec3(0, 1, 0));
 }
 
 Game::~Game() { }
 
-void Game::update()
+void Game::update(Input input)
 {
+    double speed = 0.1f;
 
+    rot.x += input.getDY() * 0.002d;
+    rot.y += input.getDX() * 0.002d;
+
+    if(input.getKey(GLFW_KEY_W))
+    {
+        pos.z -= speed * cos(rot.y);
+        pos.x += speed * sin(rot.y);
+    }
+    if(input.getKey(GLFW_KEY_A))
+    {
+        pos.z -= speed * sin(rot.y);
+        pos.x -= speed * cos(rot.y);
+    }
+    if(input.getKey(GLFW_KEY_S))
+    {
+        pos.z += speed * cos(rot.y);
+        pos.x -= speed * sin(rot.y);
+    }
+    if(input.getKey(GLFW_KEY_D))
+    {
+        pos.z += speed * sin(rot.y);
+        pos.x += speed * cos(rot.y);
+    }
+    if(input.getKey(GLFW_KEY_LEFT_SHIFT))
+        pos.y -= speed;
+    if(input.getKey(GLFW_KEY_SPACE))
+        pos.y += speed;
+
+    viewMatrix = glm::mat4(1.0);
+    viewMatrix = glm::rotate(viewMatrix, (glm::lowp_float)rot.y, glm::vec3(0, 1, 0));
+    viewMatrix = glm::rotate(viewMatrix, (glm::lowp_float)rot.x , glm::normalize(glm::vec3(cos(-rot.y), 0, -sin(-rot.y))));
+    viewMatrix = glm::translate(viewMatrix, -pos);
 }
 
 void Game::render(Window *window)
@@ -70,6 +106,7 @@ void Game::render(Window *window)
     shader->bind();
 
     shader->setUniform("projectionMatrix", projectionMatrix);
+    shader->setUniform("viewMatrix", viewMatrix);
     shader->setUniform("transformationMatrix", transformationMatrix);
 
     mesh->draw();

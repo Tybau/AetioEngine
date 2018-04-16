@@ -27,7 +27,7 @@ set(SOURCES
         src/graphics/Mesh.hpp
         src/graphics/Shader.cpp
         src/graphics/Shader.hpp
-        src/utils/Buffer.hpp)
+        src/utils/Buffer.hpp src/utils/Input.cpp src/utils/Input.hpp)
 
 include_directories(src/ include/)
 add_executable(${NAME} ${SOURCES})
