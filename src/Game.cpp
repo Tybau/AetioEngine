@@ -51,7 +51,7 @@ Game::Game()
 
     transformationMatrix = glm::mat4(1.0f);
     transformationMatrix = glm::translate(transformationMatrix, glm::vec3(0, 0, -5));
-    //transformationMatrix = glm::rotate(transformationMatrix, (glm::lowp_float)glm::radians(45.0), glm::vec3(0, 1, 0));
+    transformationMatrix = glm::rotate(transformationMatrix, (glm::lowp_float)glm::radians(15.0), glm::vec3(0, 0, 1));
 }
 
 Game::~Game() { }
