@@ -122,9 +122,22 @@ CMakeFiles/AetioEngine.dir/src/graphics/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AetioEngine.dir/src/graphics/Shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tybau/dev/pixel/AetioEngine/src/graphics/Shader.cpp -o CMakeFiles/AetioEngine.dir/src/graphics/Shader.cpp.s
 
+CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o: CMakeFiles/AetioEngine.dir/flags.make
+CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o: ../src/graphics/Framebuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o -c /home/tybau/dev/pixel/AetioEngine/src/graphics/Framebuffer.cpp
+
+CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tybau/dev/pixel/AetioEngine/src/graphics/Framebuffer.cpp > CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.i
+
+CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tybau/dev/pixel/AetioEngine/src/graphics/Framebuffer.cpp -o CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.s
+
 CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o: CMakeFiles/AetioEngine.dir/flags.make
 CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o: ../src/utils/Input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o -c /home/tybau/dev/pixel/AetioEngine/src/utils/Input.cpp
 
 CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.i: cmake_force
@@ -135,6 +148,19 @@ CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tybau/dev/pixel/AetioEngine/src/utils/Input.cpp -o CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.s
 
+CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o: CMakeFiles/AetioEngine.dir/flags.make
+CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o: ../src/utils/Bitmap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o -c /home/tybau/dev/pixel/AetioEngine/src/utils/Bitmap.cpp
+
+CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tybau/dev/pixel/AetioEngine/src/utils/Bitmap.cpp > CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.i
+
+CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tybau/dev/pixel/AetioEngine/src/utils/Bitmap.cpp -o CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.s
+
 # Object files for target AetioEngine
 AetioEngine_OBJECTS = \
 "CMakeFiles/AetioEngine.dir/src/main.cpp.o" \
@@ -142,7 +168,9 @@ AetioEngine_OBJECTS = \
 "CMakeFiles/AetioEngine.dir/src/Context.cpp.o" \
 "CMakeFiles/AetioEngine.dir/src/graphics/Mesh.cpp.o" \
 "CMakeFiles/AetioEngine.dir/src/graphics/Shader.cpp.o" \
-"CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o"
+"CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o" \
+"CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o" \
+"CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o"
 
 # External object files for target AetioEngine
 AetioEngine_EXTERNAL_OBJECTS =
@@ -152,7 +180,9 @@ AetioEngine: CMakeFiles/AetioEngine.dir/src/graphics/Window.cpp.o
 AetioEngine: CMakeFiles/AetioEngine.dir/src/Context.cpp.o
 AetioEngine: CMakeFiles/AetioEngine.dir/src/graphics/Mesh.cpp.o
 AetioEngine: CMakeFiles/AetioEngine.dir/src/graphics/Shader.cpp.o
+AetioEngine: CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o
 AetioEngine: CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o
+AetioEngine: CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o
 AetioEngine: CMakeFiles/AetioEngine.dir/build.make
 AetioEngine: /usr/lib/x86_64-linux-gnu/libGL.so
 AetioEngine: deps/glfw/src/libglfw3.a
@@ -167,7 +197,7 @@ AetioEngine: /usr/lib/x86_64-linux-gnu/libXcursor.so
 AetioEngine: /usr/lib/x86_64-linux-gnu/libGL.so
 AetioEngine: /usr/lib/x86_64-linux-gnu/libGLU.so
 AetioEngine: CMakeFiles/AetioEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable AetioEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable AetioEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AetioEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,5 +1,10 @@
 #include <utils/Buffer.hpp>
+#include <utils/Bitmap.hpp>
+#include "utils/bitmap_image.hpp"
+
 #include "Context.hpp"
+
+#include <fstream>
 
 
 Game::Game()
@@ -96,7 +101,6 @@ void Game::update(Input input)
 
 void Game::render(Window *window)
 {
-
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     glCullFace(GL_FRONT);
@@ -111,6 +115,29 @@ void Game::render(Window *window)
 
     mesh->draw();
     shader->unbind();
+
+	/**
+	 * Generate image
+	 */
+	
+	glEnd();
+	unsigned char* imageData = (unsigned char *)malloc((int)(1280*720*3));
+	glReadPixels(0, 0, 1280, 720, GL_RGB, GL_UNSIGNED_BYTE, imageData);
+
+	bitmap_image img(1280, 720);
+
+	for(int i = 0; i < 720; i++)
+	{
+		for(int j = 0; j < 1280; j++)
+		{
+
+			img.set_pixel(j, i, 
+				imageData[(i * 1280 + j) * 3 + 0],
+				imageData[(i * 1280 + j) * 3 + 1],
+				imageData[(i * 1280 + j) * 3 + 2]);
+		}
+	}
+	img.save_image("test.bmp");
 }
 
 void Game::renderGUI(Window *window)

@@ -248,6 +248,33 @@ src/Context.cpp.s:
 	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/Context.cpp.s
 .PHONY : src/Context.cpp.s
 
+src/graphics/Framebuffer.o: src/graphics/Framebuffer.cpp.o
+
+.PHONY : src/graphics/Framebuffer.o
+
+# target to build an object file
+src/graphics/Framebuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o
+.PHONY : src/graphics/Framebuffer.cpp.o
+
+src/graphics/Framebuffer.i: src/graphics/Framebuffer.cpp.i
+
+.PHONY : src/graphics/Framebuffer.i
+
+# target to preprocess a source file
+src/graphics/Framebuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.i
+.PHONY : src/graphics/Framebuffer.cpp.i
+
+src/graphics/Framebuffer.s: src/graphics/Framebuffer.cpp.s
+
+.PHONY : src/graphics/Framebuffer.s
+
+# target to generate assembly for a file
+src/graphics/Framebuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.s
+.PHONY : src/graphics/Framebuffer.cpp.s
+
 src/graphics/Mesh.o: src/graphics/Mesh.cpp.o
 
 .PHONY : src/graphics/Mesh.o
@@ -356,6 +383,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/utils/Bitmap.o: src/utils/Bitmap.cpp.o
+
+.PHONY : src/utils/Bitmap.o
+
+# target to build an object file
+src/utils/Bitmap.cpp.o:
+	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o
+.PHONY : src/utils/Bitmap.cpp.o
+
+src/utils/Bitmap.i: src/utils/Bitmap.cpp.i
+
+.PHONY : src/utils/Bitmap.i
+
+# target to preprocess a source file
+src/utils/Bitmap.cpp.i:
+	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.i
+.PHONY : src/utils/Bitmap.cpp.i
+
+src/utils/Bitmap.s: src/utils/Bitmap.cpp.s
+
+.PHONY : src/utils/Bitmap.s
+
+# target to generate assembly for a file
+src/utils/Bitmap.cpp.s:
+	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.s
+.PHONY : src/utils/Bitmap.cpp.s
+
 src/utils/Input.o: src/utils/Input.cpp.o
 
 .PHONY : src/utils/Input.o
@@ -403,6 +457,9 @@ help:
 	@echo "... src/Context.o"
 	@echo "... src/Context.i"
 	@echo "... src/Context.s"
+	@echo "... src/graphics/Framebuffer.o"
+	@echo "... src/graphics/Framebuffer.i"
+	@echo "... src/graphics/Framebuffer.s"
 	@echo "... src/graphics/Mesh.o"
 	@echo "... src/graphics/Mesh.i"
 	@echo "... src/graphics/Mesh.s"
@@ -415,6 +472,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/utils/Bitmap.o"
+	@echo "... src/utils/Bitmap.i"
+	@echo "... src/utils/Bitmap.s"
 	@echo "... src/utils/Input.o"
 	@echo "... src/utils/Input.i"
 	@echo "... src/utils/Input.s"

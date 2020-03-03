@@ -800,3 +800,17 @@ Linking C executable cmTC_43df2
 make[1]: Leaving directory '/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/CMakeTmp'
 
 
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_30435/fast"
+/usr/bin/make -f CMakeFiles/cmTC_30435.dir/build.make CMakeFiles/cmTC_30435.dir/build
+make[1]: Entering directory '/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30435.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_30435.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30435
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30435.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    -rdynamic CMakeFiles/cmTC_30435.dir/CheckFunctionExists.c.o  -o cmTC_30435 -lICE 
+make[1]: Leaving directory '/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/CMakeTmp'
+
+

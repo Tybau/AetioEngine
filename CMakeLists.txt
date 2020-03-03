@@ -26,8 +26,12 @@ set(SOURCES
         src/graphics/Mesh.cpp
         src/graphics/Mesh.hpp
         src/graphics/Shader.cpp
-        src/graphics/Shader.hpp
-        src/utils/Buffer.hpp src/utils/Input.cpp src/utils/Input.hpp)
+		src/graphics/Shader.hpp
+		src/graphics/Framebuffer.cpp
+		src/graphics/Framebuffer.hpp
+		src/utils/Buffer.hpp 
+		src/utils/Input.cpp src/utils/Input.hpp
+		src/utils/bitmap_image.hpp)
 
 include_directories(src/ include/)
 add_executable(${NAME} ${SOURCES})

@@ -104,10 +104,16 @@ CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../include/nuklear_glfw_gl4.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/graphics/Mesh.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/graphics/Shader.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/graphics/Window.hpp
+CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/utils/Bitmap.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/utils/Buffer.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/utils/Input.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/Context.cpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/Context.hpp
+CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/utils/bitmap_image.hpp
+
+CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o: ../deps/glew/include/GL/glew.h
+CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o: ../src/graphics/Framebuffer.cpp
+CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o: ../src/graphics/Framebuffer.hpp
 
 CMakeFiles/AetioEngine.dir/src/graphics/Mesh.cpp.o: ../deps/glew/include/GL/glew.h
 CMakeFiles/AetioEngine.dir/src/graphics/Mesh.cpp.o: ../src/utils/Buffer.hpp
@@ -324,6 +330,9 @@ CMakeFiles/AetioEngine.dir/src/main.cpp.o: ../src/utils/Buffer.hpp
 CMakeFiles/AetioEngine.dir/src/main.cpp.o: ../src/utils/Input.hpp
 CMakeFiles/AetioEngine.dir/src/main.cpp.o: ../src/Context.hpp
 CMakeFiles/AetioEngine.dir/src/main.cpp.o: ../src/main.cpp
+
+CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o: ../src/utils/Bitmap.cpp
+CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o: ../src/utils/Bitmap.hpp
 
 CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o: ../deps/glew/include/GL/glew.h
 CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o: ../deps/glfw/include/GLFW/glfw3.h
