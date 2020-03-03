@@ -1,6 +1,4 @@
-#ifndef AETIOENGINE_MESH_HPP
-#define AETIOENGINE_MESH_HPP
-
+#pragma once
 
 #include <GL/glew.h>
 #include <utils/Buffer.hpp>
@@ -20,6 +18,3 @@ public:
 
     void draw();
 };
-
-
-#endif //AETIOENGINE_MESH_HPP

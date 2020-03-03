@@ -1,5 +1,4 @@
-#ifndef AETIOENGINE_BUFFER_HPP
-#define AETIOENGINE_BUFFER_HPP
+#pragma once
 
 template <typename T>
 class Buffer
@@ -15,6 +14,3 @@ public:
     int getSize() { return size; }
     int getMemorySize() { return size * sizeof(T); }
 };
-
-
-#endif //AETIOENGINE_BUFFER_HPP

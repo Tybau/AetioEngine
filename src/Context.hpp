@@ -1,6 +1,4 @@
-#ifndef AETIOENGINE_GAME_HPP
-#define AETIOENGINE_GAME_HPP
-
+#pragma once
 
 #include <graphics/Window.hpp>
 #include <graphics/Mesh.hpp>
@@ -28,6 +26,3 @@ public:
     void render(Window *window);
     void renderGUI(Window *window);
 };
-
-
-#endif //AETIOENGINE_GAME_HPP

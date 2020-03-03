@@ -1,6 +1,6 @@
 #include <graphics/Window.hpp>
 #include <utils/Input.hpp>
-#include "Game.hpp"
+#include "Context.hpp"
 
 int main()
 {

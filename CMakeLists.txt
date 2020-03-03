@@ -22,7 +22,7 @@ set(SOURCES
         src/main.cpp
         src/graphics/Window.cpp
         src/graphics/Window.hpp
-        src/Game.cpp src/Game.hpp
+        src/Context.cpp src/Context.hpp
         src/graphics/Mesh.cpp
         src/graphics/Mesh.hpp
         src/graphics/Shader.cpp
@@ -34,9 +34,3 @@ add_executable(${NAME} ${SOURCES})
 
 target_include_directories(${NAME} PUBLIC ${OPENGL_INCLUDE_DIR} deps/glfw/include deps/glew/include)
 target_link_libraries(${NAME} ${OPENGL_gl_LIBRARY} glfw glew)
-
-if (WIN32)
-    add_custom_command(TARGET ${NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy
-            ${CMAKE_BINARY_DIR}/bin/glew32d.dll
-            $<TARGET_FILE_DIR:${NAME}>)
-endif (WIN32)

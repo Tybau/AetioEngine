@@ -1,6 +1,4 @@
-#ifndef AETIOENGINE_SHADER_HPP
-#define AETIOENGINE_SHADER_HPP
-
+#pragma once
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>
@@ -25,6 +23,3 @@ public:
     void bind();
     void unbind();
 };
-
-
-#endif //AETIOENGINE_SHADER_HPP

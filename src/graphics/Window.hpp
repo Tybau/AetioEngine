@@ -1,5 +1,4 @@
-#ifndef AETIOENGINE_WINDOW_HPP
-#define AETIOENGINE_WINDOW_HPP
+#pragma once
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -47,6 +46,3 @@ public:
     struct nk_colorf getColor() { return color; }
     struct nk_colorf setColor(struct nk_colorf c) { color.r = c.r, color.g = c.g, color.b = c.b; }
 };
-
-
-#endif //AETIOENGINE_WINDOW_HPP

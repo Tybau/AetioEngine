@@ -1,6 +1,4 @@
-#ifndef AETIOENGINE_INPUT_HPP
-#define AETIOENGINE_INPUT_HPP
-
+#pragma once
 
 #include <graphics/Window.hpp>
 #include <GLFW/glfw3.h>
@@ -30,6 +28,3 @@ public:
     bool isFocused() { return focused; }
     void setFocused(bool focused) { this->focused = focused; }
 };
-
-
-#endif //AETIOENGINE_INPUT_HPP

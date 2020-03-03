@@ -28,6 +28,13 @@ Window::Window(int w, int h, std::string t)
 
     glfwGetWindowSize(window, &width, &height);
 
+	int count;
+	GLFWmonitor *monitor = glfwGetMonitors(&count)[0];
+	const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+
+	glfwSetWindowMonitor(window, monitor, 0, 0, mode->width, mode->height, mode->refreshRate);
+
+
     /* OpenGL */
     glViewport(0, 0, width, height);
     glewExperimental = 1;
