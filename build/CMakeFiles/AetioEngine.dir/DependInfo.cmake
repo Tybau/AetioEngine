@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tybau/dev/pixel/AetioEngine/src/graphics/Shader.cpp" "/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/AetioEngine.dir/src/graphics/Shader.cpp.o"
   "/home/tybau/dev/pixel/AetioEngine/src/graphics/Window.cpp" "/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/AetioEngine.dir/src/graphics/Window.cpp.o"
   "/home/tybau/dev/pixel/AetioEngine/src/main.cpp" "/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/AetioEngine.dir/src/main.cpp.o"
-  "/home/tybau/dev/pixel/AetioEngine/src/utils/Bitmap.cpp" "/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o"
   "/home/tybau/dev/pixel/AetioEngine/src/utils/Input.cpp" "/home/tybau/dev/pixel/AetioEngine/build/CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

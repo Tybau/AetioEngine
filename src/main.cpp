@@ -4,11 +4,11 @@
 
 int main()
 {
-    Window *window = new Window(1280, 720, "Hello!");
+    Window *window = new Window(640, 360, "Hello!");
 
     Input input(window);
 
-    Game game;
+    Context game;
 
     while (!window->closeRequested())
     {

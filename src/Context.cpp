@@ -1,13 +1,13 @@
 #include <utils/Buffer.hpp>
-#include <utils/Bitmap.hpp>
 #include "utils/bitmap_image.hpp"
 
 #include "Context.hpp"
 
 #include <fstream>
+#include <pthread.h>
 
 
-Game::Game()
+Context::Context()
 {
     GLfloat positions[] = {
             0, 0, 0,
@@ -57,16 +57,25 @@ Game::Game()
     transformationMatrix = glm::mat4(1.0f);
     transformationMatrix = glm::translate(transformationMatrix, glm::vec3(0, 0, -5));
     transformationMatrix = glm::rotate(transformationMatrix, (glm::lowp_float)glm::radians(15.0), glm::vec3(0, 0, 1));
+
+	timer = clock();
+	thread = 0;
+
+	thread_data.alive = false;
+	thread_data.image_data = (unsigned char *)malloc((int)(1280*720*3));
 }
 
-Game::~Game() { }
+Context::~Context() 
+{
+	free(thread_data.image_data);
+}
 
-void Game::update(Input input)
+void Context::update(Input input)
 {
     double speed = 0.1f;
 
-    rot.x += input.getDY() * 0.002d;
-    rot.y += input.getDX() * 0.002d;
+    rot.x += input.getDY() * 0.002;
+    rot.y += input.getDX() * 0.002;
 
     if(input.getKey(GLFW_KEY_W))
     {
@@ -99,7 +108,29 @@ void Game::update(Input input)
     viewMatrix = glm::translate(viewMatrix, -pos);
 }
 
-void Game::render(Window *window)
+void *save_bitmap(void *data)
+{
+	bitmap_thread *thread_data = (bitmap_thread *)data;
+	
+	bitmap_image img(thread_data->width, thread_data->height);
+
+	for(int i = 0; i < thread_data->height; i++)
+	{
+		for(int j = 0; j < thread_data->width; j++)
+		{
+			img.set_pixel(j, i, 
+				thread_data->image_data[(i * thread_data->width + j) * 3 + 0],
+				thread_data->image_data[(i * thread_data->width + j) * 3 + 1],
+				thread_data->image_data[(i * thread_data->width + j) * 3 + 2]);
+		}
+	}
+	img.save_image("test.bmp");
+
+	thread_data->alive = false;
+	pthread_exit(NULL);
+}
+
+void Context::render(Window *window)
 {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -116,31 +147,24 @@ void Game::render(Window *window)
     mesh->draw();
     shader->unbind();
 
+
 	/**
-	 * Generate image
+	 * Generate image 10 fps
 	 */
 	
-	glEnd();
-	unsigned char* imageData = (unsigned char *)malloc((int)(1280*720*3));
-	glReadPixels(0, 0, 1280, 720, GL_RGB, GL_UNSIGNED_BYTE, imageData);
+	if(thread_data.alive || ((double)clock() - (double)timer) / CLOCKS_PER_SEC < 1.0 / 200.0)
+		return;
+	timer = clock();
+	
+	glReadPixels(0, 0, window->getWidth(), window->getHeight(), GL_RGB, GL_UNSIGNED_BYTE, thread_data.image_data);
 
-	bitmap_image img(1280, 720);
-
-	for(int i = 0; i < 720; i++)
-	{
-		for(int j = 0; j < 1280; j++)
-		{
-
-			img.set_pixel(j, i, 
-				imageData[(i * 1280 + j) * 3 + 0],
-				imageData[(i * 1280 + j) * 3 + 1],
-				imageData[(i * 1280 + j) * 3 + 2]);
-		}
-	}
-	img.save_image("test.bmp");
+	thread_data.width = window->getWidth();
+	thread_data.height = window->getHeight();
+	thread_data.alive = true;
+	pthread_create(&thread, NULL, save_bitmap, (void *)&thread_data);	
 }
 
-void Game::renderGUI(Window *window)
+void Context::renderGUI(Window *window)
 {
     struct nk_context *ctx = window->getNkContext();
     struct nk_colorf bg = window->getColor();
@@ -178,6 +202,7 @@ void Game::renderGUI(Window *window)
             nk_combo_end(ctx);
         }
     }
+	
     nk_end(ctx);
 
     window->setColor(bg);

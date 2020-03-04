@@ -7,7 +7,18 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <utils/Input.hpp>
 
-class Game
+#include <time.h>
+
+struct bitmap_thread
+{
+	bool alive;
+	unsigned char *image_data;
+
+	int width;
+	int height;
+};
+
+class Context
 {
 private:
     Mesh *mesh;
@@ -18,9 +29,14 @@ private:
 
     glm::vec3 pos;
     glm::vec3 rot;
+
+	// image save
+	clock_t timer;
+	pthread_t thread;
+	bitmap_thread thread_data;
 public:
-    Game();
-    ~Game();
+    Context();
+    ~Context();
 
     void update(Input input);
     void render(Window *window);

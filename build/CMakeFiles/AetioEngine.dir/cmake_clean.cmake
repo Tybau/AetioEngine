@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/AetioEngine.dir/src/graphics/Shader.cpp.o"
   "CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o"
   "CMakeFiles/AetioEngine.dir/src/utils/Input.cpp.o"
-  "CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o"
   "AetioEngine.pdb"
   "AetioEngine"
 )

@@ -846,30 +846,12 @@ nuklear.h
 nuklear_glfw_gl4.hpp
 -
 
-../src/utils/Bitmap.hpp
-stdint.h
--
-arpa/inet.h
--
-
 ../src/utils/Buffer.hpp
 
 ../src/utils/Input.hpp
 graphics/Window.hpp
 -
 GLFW/glfw3.h
--
-
-/home/tybau/dev/pixel/AetioEngine/src/Context.cpp
-utils/Buffer.hpp
--
-utils/Bitmap.hpp
--
-utils/bitmap_image.hpp
-/home/tybau/dev/pixel/AetioEngine/src/utils/bitmap_image.hpp
-Context.hpp
-/home/tybau/dev/pixel/AetioEngine/src/Context.hpp
-fstream
 -
 
 /home/tybau/dev/pixel/AetioEngine/src/Context.hpp
@@ -883,26 +865,14 @@ glm/gtc/matrix_transform.hpp
 -
 utils/Input.hpp
 -
+time.h
+-
 
-/home/tybau/dev/pixel/AetioEngine/src/utils/bitmap_image.hpp
-algorithm
+/home/tybau/dev/pixel/AetioEngine/src/main.cpp
+graphics/Window.hpp
 -
-cmath
+utils/Input.hpp
 -
-cstdlib
--
-cstring
--
-fstream
--
-iostream
--
-iterator
--
-limits
--
-string
--
-vector
--
+Context.hpp
+/home/tybau/dev/pixel/AetioEngine/src/Context.hpp
 

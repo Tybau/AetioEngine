@@ -383,33 +383,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/utils/Bitmap.o: src/utils/Bitmap.cpp.o
-
-.PHONY : src/utils/Bitmap.o
-
-# target to build an object file
-src/utils/Bitmap.cpp.o:
-	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.o
-.PHONY : src/utils/Bitmap.cpp.o
-
-src/utils/Bitmap.i: src/utils/Bitmap.cpp.i
-
-.PHONY : src/utils/Bitmap.i
-
-# target to preprocess a source file
-src/utils/Bitmap.cpp.i:
-	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.i
-.PHONY : src/utils/Bitmap.cpp.i
-
-src/utils/Bitmap.s: src/utils/Bitmap.cpp.s
-
-.PHONY : src/utils/Bitmap.s
-
-# target to generate assembly for a file
-src/utils/Bitmap.cpp.s:
-	$(MAKE) -f CMakeFiles/AetioEngine.dir/build.make CMakeFiles/AetioEngine.dir/src/utils/Bitmap.cpp.s
-.PHONY : src/utils/Bitmap.cpp.s
-
 src/utils/Input.o: src/utils/Input.cpp.o
 
 .PHONY : src/utils/Input.o
@@ -472,9 +445,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/utils/Bitmap.o"
-	@echo "... src/utils/Bitmap.i"
-	@echo "... src/utils/Bitmap.s"
 	@echo "... src/utils/Input.o"
 	@echo "... src/utils/Input.i"
 	@echo "... src/utils/Input.s"

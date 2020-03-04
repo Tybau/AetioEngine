@@ -14,6 +14,9 @@ Window::Window(int w, int h, std::string t)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	
+	// To not display window
+	//glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
 
     /* Create a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
