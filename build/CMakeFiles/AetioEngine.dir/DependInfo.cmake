@@ -26,6 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
   "../deps/glfw/include"
   "../deps/glew/include"
+  "/opt/libjpeg-turbo/include"
   )
 
 # Targets to which this target links.

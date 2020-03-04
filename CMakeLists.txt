@@ -18,6 +18,10 @@ add_subdirectory(deps/glew/build/cmake)
 
 include_directories(deps/glm)
 
+link_directories(/opt/libjpeg-turbo/lib64)
+
+
+
 set(SOURCES
         src/main.cpp
         src/graphics/Window.cpp
@@ -33,8 +37,9 @@ set(SOURCES
 		src/utils/Input.cpp src/utils/Input.hpp
 		src/utils/bitmap_image.hpp)
 
+		
 include_directories(src/ include/)
 add_executable(${NAME} ${SOURCES})
 
-target_include_directories(${NAME} PUBLIC ${OPENGL_INCLUDE_DIR} deps/glfw/include deps/glew/include)
-target_link_libraries(${NAME} ${OPENGL_gl_LIBRARY} glfw glew)
+target_include_directories(${NAME} PUBLIC ${OPENGL_INCLUDE_DIR} deps/glfw/include deps/glew/include /opt/libjpeg-turbo/include)
+target_link_libraries(${NAME} ${OPENGL_gl_LIBRARY} glfw glew turbojpeg)

@@ -110,6 +110,7 @@ CMakeFiles/AetioEngine.dir/src/Context.cpp.o
  /home/tybau/dev/pixel/AetioEngine/src/Context.cpp
  /home/tybau/dev/pixel/AetioEngine/src/Context.hpp
  /home/tybau/dev/pixel/AetioEngine/src/utils/bitmap_image.hpp
+ /opt/libjpeg-turbo/include/turbojpeg.h
 CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o
  ../deps/glew/include/GL/glew.h
  /home/tybau/dev/pixel/AetioEngine/src/graphics/Framebuffer.cpp

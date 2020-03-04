@@ -5,6 +5,7 @@
 
 #include <fstream>
 #include <pthread.h>
+#include <turbojpeg.h>
 
 
 Context::Context()
@@ -130,6 +131,36 @@ void *save_bitmap(void *data)
 	pthread_exit(NULL);
 }
 
+void *save_jpg(void *data)
+{
+	bitmap_thread *thread_data = (bitmap_thread *)data;
+
+	const int JPEG_QUALITY = 75;
+	const int COLOR_COMPONENTS = 3;
+	int _width = thread_data->width;
+	int _height = thread_data->height;
+
+	long unsigned int _jpegSize = 0;
+	unsigned char* _compressedImage = NULL;
+
+	tjhandle _jpegCompressor = tjInitCompress();
+
+	tjCompress2(_jpegCompressor, thread_data->image_data, _width, 0, _height, TJPF_RGB,
+			&_compressedImage, &_jpegSize, TJSAMP_444, JPEG_QUALITY,
+			TJFLAG_FASTDCT);
+
+	std::ofstream file;
+	file.open("test.jpg");
+	file.write((const char *)_compressedImage, _jpegSize);
+	file.close();
+
+	tjDestroy(_jpegCompressor);
+	tjFree(_compressedImage);
+
+	thread_data->alive = false;
+	pthread_exit(NULL);
+}
+
 void Context::render(Window *window)
 {
     glEnable(GL_DEPTH_TEST);
@@ -152,7 +183,7 @@ void Context::render(Window *window)
 	 * Generate image 10 fps
 	 */
 	
-	if(thread_data.alive || ((double)clock() - (double)timer) / CLOCKS_PER_SEC < 1.0 / 200.0)
+	if(thread_data.alive || ((double)clock() - (double)timer) / CLOCKS_PER_SEC < 1.0 / 50.0)
 		return;
 	timer = clock();
 	
@@ -161,7 +192,7 @@ void Context::render(Window *window)
 	thread_data.width = window->getWidth();
 	thread_data.height = window->getHeight();
 	thread_data.alive = true;
-	pthread_create(&thread, NULL, save_bitmap, (void *)&thread_data);	
+	pthread_create(&thread, NULL, save_jpg, (void *)&thread_data);	
 }
 
 void Context::renderGUI(Window *window)

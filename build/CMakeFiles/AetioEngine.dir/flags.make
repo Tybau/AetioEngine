@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = -DGLEW_STATIC
 
-CXX_INCLUDES = -I/home/tybau/dev/pixel/AetioEngine/deps/glm -I/home/tybau/dev/pixel/AetioEngine/src -I/home/tybau/dev/pixel/AetioEngine/include -I/home/tybau/dev/pixel/AetioEngine/deps/glfw/include -I/home/tybau/dev/pixel/AetioEngine/deps/glew/include 
+CXX_INCLUDES = -I/home/tybau/dev/pixel/AetioEngine/deps/glm -I/home/tybau/dev/pixel/AetioEngine/src -I/home/tybau/dev/pixel/AetioEngine/include -I/home/tybau/dev/pixel/AetioEngine/deps/glfw/include -I/home/tybau/dev/pixel/AetioEngine/deps/glew/include -I/opt/libjpeg-turbo/include 
 

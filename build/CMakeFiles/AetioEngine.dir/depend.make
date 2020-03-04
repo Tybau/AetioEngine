@@ -109,6 +109,7 @@ CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/utils/Input.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/Context.cpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/Context.hpp
 CMakeFiles/AetioEngine.dir/src/Context.cpp.o: ../src/utils/bitmap_image.hpp
+CMakeFiles/AetioEngine.dir/src/Context.cpp.o: /opt/libjpeg-turbo/include/turbojpeg.h
 
 CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o: ../deps/glew/include/GL/glew.h
 CMakeFiles/AetioEngine.dir/src/graphics/Framebuffer.cpp.o: ../src/graphics/Framebuffer.cpp

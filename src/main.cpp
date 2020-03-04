@@ -4,7 +4,7 @@
 
 int main()
 {
-    Window *window = new Window(640, 360, "Hello!");
+    Window *window = new Window(1280, 720, "Hello!");
 
     Input input(window);
 
